@@ -1,0 +1,9 @@
+.btn {
+  @include fontstyles(16px, 1.87, 0.06em, 700);
+  background-color: var(--accent-color);
+  color: var(--external-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
