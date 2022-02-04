@@ -1,18 +1,32 @@
 .section__title {
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
+  @include fontstyles(28px, 1.18, 0.03em, null);
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    @include fontstyles(36px, 1.17, 0.03em, null);
+    margin-bottom: 50px;
+  }
 }
 
 .client {
+  margin-bottom: -30px;
+  margin-left: -30px;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.client__item + .client__item {
+.client__item {
+  margin-bottom: 30px;
+  width: calc(100% / 2 - 30px);
   margin-left: 30px;
+
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 3 - 30px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 6 - 30px);
+  }
 }
 
 .client__link {
