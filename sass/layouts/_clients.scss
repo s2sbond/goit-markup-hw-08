@@ -16,10 +16,10 @@
 }
 
 .client__item {
-  margin-bottom: 30px;
   width: calc(100% / 2 - 30px);
+  margin-bottom: 30px;
   margin-left: 30px;
-  flex-grow: 1;
+
   @media screen and (min-width: 768px) {
     width: calc(100% / 3 - 30px);
   }
@@ -46,13 +46,6 @@
   &:focus {
     color: var(--accent-color);
     border-color: var(--accent-color);
-  }
-  @media screen and (min-width: 768px) {
-    width: 226px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 170px;
   }
 }
 
