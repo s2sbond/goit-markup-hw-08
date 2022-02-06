@@ -116,7 +116,7 @@ h6 {
 
 .modal {
   position: absolute;
-  width: 528px;
+  width: 90vw;
   min-height: 581px;
   padding: 40px;
   background-color: var(--external-color);
@@ -137,6 +137,18 @@ h6 {
   -webkit-transform: translate(-50%, 50%) scale(0.1);
           transform: translate(-50%, 50%) scale(0.1);
   top: 0;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .modal__btn-close {
@@ -180,8 +192,16 @@ h6 {
 .modal__title {
   margin-bottom: 12px;
   font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
   text-align: center;
   color: var(--title-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.15;
+  }
 }
 
 .modal-form {
@@ -843,6 +863,9 @@ h6 {
   margin-bottom: 30px;
   width: calc(100% / 2 - 30px);
   margin-left: 30px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 @media screen and (min-width: 768px) {
@@ -858,7 +881,7 @@ h6 {
 }
 
 .client__link {
-  width: 210px;
+  max-width: 100%;
   height: 92px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1194,7 +1217,7 @@ h6 {
   height: 100%;
   top: 0;
   left: 0;
-  padding: 63px 24px;
+  padding: 77px 24px;
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
@@ -1216,6 +1239,18 @@ h6 {
 .project-list__link:focus .project-list__img-txt {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+@media screen and (min-width: 786px) {
+  .project-list__img-txt {
+    padding: 49px 24px;
+  }
+}
+
+@media screen and (min-width: 1200pxpx) {
+  .project-list__img-txt {
+    padding: 63px 24px;
+  }
 }
 
 .project-list__cont {

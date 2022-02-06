@@ -12,7 +12,7 @@
 
 .modal {
   position: absolute;
-  width: 528px;
+  width: 90vw;
   min-height: 581px;
   padding: 40px;
   background-color: var(--external-color);
@@ -31,6 +31,14 @@
     transform: translate(-50%, 50%) scale(0.1);
 
     top: 0;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
   }
 }
 
@@ -67,9 +75,13 @@
 
 .modal__title {
   margin-bottom: 12px;
-  font-size: 20px;
+  @include fontstyles(20px, 1.5, 0.03em, null);
   text-align: center;
   color: var(--title-color);
+
+  @media screen and (min-width: 1200px) {
+    @include fontstyles(null, 1.15, null, null);
+  }
 }
 
 .modal-form {
