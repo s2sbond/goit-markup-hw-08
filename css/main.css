@@ -134,8 +134,8 @@ h6 {
 }
 
 .backdrop.is-hidden .modal {
-  -webkit-transform: translate(-50%, 50%) scale(0.1);
-          transform: translate(-50%, 50%) scale(0.1);
+  -webkit-transform: translate(-50%, -50%) scale(0.1);
+          transform: translate(-50%, -50%) scale(0.1);
   top: 0;
 }
 
@@ -393,11 +393,19 @@ h6 {
 .logo {
   display: block;
   font-family: 'Raleway', sans-serif;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+    font-weight: 700;
+  }
 }
 
 .logo__black {
@@ -948,32 +956,27 @@ h6 {
 }
 
 .footer {
+  max-width: 1600px;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bg-color);
+  text-align: center;
 }
 
 .container--flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  display: block;
 }
 
 .footer__box-addr {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  margin-bottom: 60px;
 }
 
-.addr {
-  margin-top: 20px;
+.logo--mbfooter {
+  margin-bottom: 20px;
 }
 
 .addr__item + .addr__item {
-  margin-top: 9px;
+  margin-bottom: 8px;
 }
 
 .addr__link {
@@ -995,7 +998,7 @@ h6 {
 }
 
 .footer__box-social {
-  margin-left: 70px;
+  margin-bottom: 60px;
 }
 
 .footer__title {
@@ -1009,25 +1012,13 @@ h6 {
 }
 
 .footer__box-form {
-  margin-left: 93px;
-}
-
-.footer-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.footer-form__label {
-  margin-right: 12px;
+  text-align: center;
 }
 
 .footer-form__input {
-  width: 358px;
+  width: 450px;
   height: 50px;
+  margin-bottom: 20px;
   padding: 15px 16px;
   font-size: 16px;
   line-height: 1.25;
@@ -1081,6 +1072,7 @@ h6 {
 }
 
 .footer-form__btn {
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
