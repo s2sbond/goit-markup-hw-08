@@ -3,29 +3,44 @@
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bg-color);
-  text-align: center;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .container--flex {
   display: block;
-  // display: flex;
-  // align-items: baseline;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
+  }
+
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 }
 
 .footer__box-addr {
-  // flex-grow: 1;
-  margin-bottom: 60px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-grow: 1;
+    margin-right: 70px;
+  }
 }
 
 .logo--mbfooter {
   margin-bottom: 20px;
 }
-// .addr {
-//   margin-top: 20px;
-// }
 
 .addr__item + .addr__item {
   margin-bottom: 8px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 }
 
 .addr__link {
@@ -45,8 +60,12 @@
 }
 
 .footer__box-social {
-  // margin-left: 70px;
-  margin-bottom: 60px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .footer__title {
@@ -58,26 +77,27 @@
 }
 
 .footer__box-form {
-  text-align: center;
-  // margin-left: 93px;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
-// .footer-form {
-//   display: flex;
-//   align-items: center;
+.footer-form {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
+}
 
-// }
-
-// .footer-form__label {
-//   margin-right: 12px;
-
-// }
+.footer-form__label {
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+  }
+}
 
 .footer-form__input {
-  // width: 358px;
   width: 450px;
   height: 50px;
-  margin-bottom: 20px;
   padding: 15px 16px;
   @include fontstyles(16px, 1.25, 0.03em, null);
   color: rgba(255, 255, 255, 0.6);
@@ -101,6 +121,18 @@
   &:not(:placeholder-shown) {
     border-color: var(--accent-color);
     color: var(--external-color);
+  }
+
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
   }
 }
 

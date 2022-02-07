@@ -960,15 +960,51 @@ h6 {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bg-color);
-  text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer {
+    text-align: center;
+  }
 }
 
 .container--flex {
   display: block;
 }
 
-.footer__box-addr {
-  margin-bottom: 60px;
+@media screen and (min-width: 768px) {
+  .container--flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .container--flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer__box-addr {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__box-addr {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin-right: 70px;
+  }
 }
 
 .logo--mbfooter {
@@ -977,6 +1013,12 @@ h6 {
 
 .addr__item + .addr__item {
   margin-bottom: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .addr__item + .addr__item {
+    margin-bottom: 9px;
+  }
 }
 
 .addr__link {
@@ -997,8 +1039,16 @@ h6 {
   color: var(--main-text-color);
 }
 
-.footer__box-social {
-  margin-bottom: 60px;
+@media screen and (max-width: 1199px) {
+  .footer__box-social {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__box-social {
+    margin-right: 93px;
+  }
 }
 
 .footer__title {
@@ -1011,14 +1061,32 @@ h6 {
   margin-bottom: 20px;
 }
 
-.footer__box-form {
-  text-align: center;
+@media screen and (max-width: 1199px) {
+  .footer__box-form {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form__label {
+    margin-right: 12px;
+  }
 }
 
 .footer-form__input {
   width: 450px;
   height: 50px;
-  margin-bottom: 20px;
   padding: 15px 16px;
   font-size: 16px;
   line-height: 1.25;
@@ -1069,6 +1137,24 @@ h6 {
 .footer-form__input:not(:placeholder-shown) {
   border-color: var(--accent-color);
   color: var(--external-color);
+}
+
+@media screen and (max-width: 479px) {
+  .footer-form__input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .footer-form__input {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-form__input {
+    width: 358px;
+  }
 }
 
 .footer-form__btn {
