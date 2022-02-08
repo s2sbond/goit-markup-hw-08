@@ -20,7 +20,7 @@
   <body>
     <!--Шапка сайта-->
 
-    <!-- <header class="header">
+    <header class="header">
       <div class="container container--flex">
         <nav class="navigate">
           <a class="logo" href="./index.html">Web<span class="logo__black">Studio</span></a>
@@ -54,7 +54,20 @@
           </li>
         </ul>
       </div>
-    </header> -->
+
+      <!-- ------- Мобильное меню------------ -->
+
+      <button
+        class="page-header__menu-toggle menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Кнопка открытия мобильного меню"
+      >
+        <svg width="40" height="40">
+          <use href="./images/icons.svg#icon-menu-open"></use>
+        </svg>
+      </button>
+    </header>
 
     <!---------Герой--------->
 
@@ -128,19 +141,52 @@
           <ul class="product">
             <li class="product__item">
               <div class="product__thumb">
-                <img src="./images/box1.jpg" alt="набор текста на клавиатуре" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/product/img-desc-keyboard@1-min.jpg 1x,
+                      ./images/product/img-desc-keyboard@2-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/product/img-desc-keyboard@1-min.jpg"
+                    alt="набор текста на клавиатуре"
+                  />
+                </picture>
                 <p class="product__txt">Десктопные приложения</p>
               </div>
             </li>
             <li class="product__item">
               <div class="product__thumb">
-                <img src="./images/box2.jpg" alt="мобильный телефон в руке и ноутбук" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/product/img-desc-phone@1-min.jpg 1x,
+                      ./images/product/img-desc-phone@2-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/product/img-desc-phone@1-min.jpg"
+                    alt="мобильный телефон в руке и ноутбук"
+                  />
+                </picture>
                 <p class="product__txt">Мобильные приложения</p>
               </div>
             </li>
             <li class="product__item">
               <div class="product__thumb">
-                <img src="./images/box3.jpg" alt="планшет в руке" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/product/img-desc-tablet@1-min.jpg 1x,
+                      ./images/product/img-desc-tablet@2-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img src="./images/product/img-desc-tablet@1-min.jpg" alt="планшет в руке" />
+                </picture>
                 <p class="product__txt">Дизайнерские решения</p>
               </div>
             </li>
@@ -155,7 +201,25 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team">
             <li class="team__item">
-              <img src="./images/teamcard1.jpg" alt="фото мужчины в очках" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/igor-desc@1-min.jpg 1x,
+                    ./images/team/igor-desc@2-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/team/igor-tab@1-min.jpg 1x, ./images/team/igor-tab@2-min.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/team/igor-mob@1-min.jpg 1x, ./images/team/igor-mob@2-min.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <img src="./images/team/igor-desc@1-min.jpg" alt="фото мужчины в очках" />
+              </picture>
               <div class="team__container">
                 <h3 class="team__title">Игорь Демьяненко</h3>
                 <p class="team__text" lang="en">Product Designer</p>
@@ -192,7 +256,26 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/teamcard2.jpg" alt="фото женщины в очках" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/olga-desc@1-min.jpg 1x,
+                    ./images/team/olga-desc@2-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="./images/team/olga-tab@1-min.jpg 1x, ./images/team/olga-tab@2-min.jpg 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="./images/team/olga-mob@1-min.jpg 1x, ./images/team/olga-mob@2-min.jpg 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <img src="./images/team/olga-desc@1-min.jpg" alt="фото женщины в очках" />
+              </picture>
+
               <div class="team__container">
                 <h3 class="team__title">Ольга Репина</h3>
                 <p class="team__text" lang="en">Frontend Developer</p>
@@ -229,7 +312,32 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/teamcard3.jpg" alt="фото улыбающегося мужчины" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/nikola-desc@1-min.jpg 1x,
+                    ./images/team/nikola-desc@2-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/nikola-tab@1-min.jpg 1x,
+                    ./images/team/nikola-tab@2-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/nikola-mob@1-min.jpg 1x,
+                    ./images/team/nikola-mob@2-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img src="./imeges/team/nikola-desc@1-min.jpg" alt="фото улыбающегося мужчины" />
+              </picture>
+
               <div class="team__container">
                 <h3 class="team__title">Николай Тарасов</h3>
                 <p class="team__text" lang="en">Marketing</p>
@@ -266,7 +374,32 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/teamcard4.jpg" alt="фото мужчины в очках" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/mihail-desc@1-min.jpg 1x,
+                    ./images/team/mihail-desc@2-min.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mihail-tab@1-min.jpg 1x,
+                    ./images/team/mihail-tab@2-min.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mihail-mob@1-min.jpg 1x,
+                    ./images/team/mihail-mob@2-min.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img src="./images/team/mihail-desc@1-min.jpg" alt="фото мужчины в очках" />
+              </picture>
+
               <div class="team__container">
                 <h3 class="team__title">Михаил Ермаков</h3>
                 <p class="team__text" lang="en">UI Designer</p>
