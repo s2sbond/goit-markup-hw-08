@@ -1,0 +1,22 @@
+.mobmenu__btn-open {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+// .mobmenu__btn-close {
+// }
+
+//
+
+.mobmenu {
+  position: absolute;
+  background-color: var(--external-color);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
