@@ -1052,12 +1052,12 @@ h6 {
   }
 }
 
-.container--flex {
+.container.container--flex {
   display: block;
 }
 
 @media screen and (min-width: 768px) {
-  .container--flex {
+  .container.container--flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1068,7 +1068,7 @@ h6 {
 }
 
 @media screen and (max-width: 1199px) {
-  .container--flex {
+  .container.container--flex {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
