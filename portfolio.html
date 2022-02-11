@@ -21,19 +21,27 @@
   <body>
     <!--Шапка сайта-->
 
-    <!-- <header class="header">
-      <div class="container header__container">
-        <nav class="navigate">
-          <a class="logo" href="./index.html">Web<span class="logo__black">Studio</span></a>
+    <header class="header">
+      <div class="container container--flex">
+        <a class="logo" href="./index.html">Web<span class="logo__black">Studio</span></a>
 
+        <button
+          type="button"
+          class="mobmenu__btn-open"
+          aria-label="Кнопка открытия мобильного меню"
+        >
+          <svg width="40" height="40">
+            <use href="./images/icons.svg#icon-menu-open"></use>
+          </svg>
+        </button>
+
+        <nav class="navigate">
           <ul class="navigate__list">
             <li class="navigate__item">
-              <a class="navigate__link" href="./index.html">Студия</a>
+              <a class="navigate__link navigate__link--current" href="./index.html">Студия</a>
             </li>
             <li class="navigate__item">
-              <a class="navigate__link navigate__link--current" href="./portfolio.html"
-                >Портфолио</a
-              >
+              <a class="navigate__link" href="./portfolio.html">Портфолио</a>
             </li>
             <li class="navigate__item"><a class="navigate__link" href="#addr">Контакты</a></li>
           </ul>
@@ -41,7 +49,7 @@
         <ul class="contact">
           <li class="contact__item">
             <a class="contact__link" href="mailto:info@devstudio.com">
-              <svg class="contact__icon" width="16" height="12">
+              <svg class="contact__icon-mail">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -49,7 +57,7 @@
           </li>
           <li class="contact__item">
             <a class="contact__link" href="tel:+380961111111">
-              <svg class="contact__icon" width="10" height="16">
+              <svg class="contact__icon-tel">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -57,7 +65,45 @@
           </li>
         </ul>
       </div>
-    </header> -->
+
+      <!-- ------- Мобильное меню------------ -->
+
+      <div class="mobmenu is-hidden">
+        <div class="container">
+          <button class="mobmenu__btn-close" aria-label="Закрытие мобильного меню">
+            <svg class="" width="40" height="40">
+              <use href="./images/icons.svg#icon-menu-close"></use>
+            </svg>
+          </button>
+          <ul class="mobmenu__list">
+            <li class="mobmenu__item"><a href="./" class="mobmenu__link">Студия</a></li>
+            <li class="mobmenu__item">
+              <a href="./portfolio.html" class="mobmenu__link">Портфолио</a>
+            </li>
+            <li class="mobmenu__item"><a href="#addr" class="mobmenu__link">Контакты</a></li>
+          </ul>
+          <div class="mobmenu-footer">
+            <a href="tel:+380961111111" class="mobmenu-footer__tel">+38 096 111 11 11</a>
+            <a href="mailto:info@devstudio.com" class="mobmenu-footer__mail">info@devstudio.com</a>
+            <ul class="mobmenu-footer__list">
+              <li class="mobmenu-footer__item">
+                <a href="" class="mobmenu-footer__link">Instagram</a>
+              </li>
+              <li class="mobmenu-footer__item">
+                <a href="" class="mobmenu-footer__link">Twitter</a>
+              </li>
+              <li class="mobmenu-footer__item">
+                <a href="" class="mobmenu-footer__link">Facebook</a>
+              </li>
+              <li class="mobmenu-footer__item">
+                <a href="" class="mobmenu-footer__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
 
     <!--Основной контент  -->
 
