@@ -28,6 +28,7 @@
           type="button"
           class="mobmenu__btn-open"
           aria-label="Кнопка открытия мобильного меню"
+          data-mobmenu-open
         >
           <svg width="40" height="40">
             <use href="./images/icons.svg#icon-menu-open"></use>
@@ -67,15 +68,21 @@
 
       <!--  Мобильное меню -->
 
-      <div class="mobmenu is-hidden">
+      <div class="mobmenu is-hidden" data-mobmenu>
         <div class="container container--mob-flex">
-          <button class="mobmenu__btn-close" aria-label="Закрытие мобильного меню">
+          <button
+            class="mobmenu__btn-close"
+            aria-label="Закрытие мобильного меню"
+            data-mobmenu-close
+          >
             <svg class="" width="40" height="40">
               <use href="./images/icons.svg#icon-menu-close"></use>
             </svg>
           </button>
           <ul class="mobmenu__list">
-            <li class="mobmenu__item"><a href="./" class="mobmenu__link mobmenu__link--current">Студия</a></li>
+            <li class="mobmenu__item">
+              <a href="./" class="mobmenu__link mobmenu__link--current">Студия</a>
+            </li>
             <li class="mobmenu__item">
               <a href="./portfolio.html" class="mobmenu__link">Портфолио</a>
             </li>
@@ -86,16 +93,40 @@
             <a href="mailto:info@devstudio.com" class="mobmenu-footer__mail">info@devstudio.com</a>
             <ul class="mobmenu-footer__list">
               <li class="mobmenu-footer__item">
-                <a href="" class="mobmenu-footer__link">Instagram</a>
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mobmenu-footer__link"
+                  >Instagram</a
+                >
               </li>
               <li class="mobmenu-footer__item">
-                <a href="" class="mobmenu-footer__link">Twitter</a>
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mobmenu-footer__link"
+                  >Twitter</a
+                >
               </li>
               <li class="mobmenu-footer__item">
-                <a href="" class="mobmenu-footer__link">Facebook</a>
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mobmenu-footer__link"
+                  >Facebook</a
+                >
               </li>
               <li class="mobmenu-footer__item">
-                <a href="" class="mobmenu-footer__link">LinkedIn</a>
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mobmenu-footer__link"
+                  >LinkedIn</a
+                >
               </li>
             </ul>
           </div>
@@ -679,5 +710,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobmenu.js"></script>
   </body>
 </html>

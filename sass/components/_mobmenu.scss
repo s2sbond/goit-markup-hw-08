@@ -5,6 +5,7 @@
   padding: 0;
   margin-left: auto;
   cursor: pointer;
+  transition: color var(--transit-time) var(--transit-time-func);
   @media screen and (min-width: 768px) {
     display: none;
   }
@@ -20,6 +21,20 @@
   padding: 0;
   margin-left: auto;
   cursor: pointer;
+  transition: color var(--transit-time) var(--transit-time-func);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobmenu__btn-open:focus,
+.mobmenu__btn-close:focus {
+  color: var(--accent-color);
+}
+
+.mobmenu__btn-open,
+.mobmenu__btn-close {
+  fill: currentColor;
 }
 
 .mobmenu {
@@ -31,6 +46,18 @@
   height: 100vh;
   z-index: 1;
   padding: 48px 25px;
+  transform: translateX(0);
+  transition: transform var(--transit-time) var(--transit-time-func),
+    visibility var(--transit-time) var(--transit-time-func),
+    opacity var(--transit-time) var(--transit-time-func);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.mobmenu.is-hidden {
+  transform: translateX(100%);
 }
 
 .container--mob-flex {
@@ -56,19 +83,17 @@
   &:focus,
   &--current {
     color: var(--accent-color);
-
-    }
   }
-// .mobmenu-footer {
-//   position: absolute;
-//   bottom: 48px;
-// }
+}
 
 .mobmenu-footer__tel {
   display: block;
   margin-bottom: 32px;
   @include fontstyles(34px, 1.18, 0.02em, 500);
   color: var(--accent-color);
+  @media screen and (max-width: 479px) {
+    @include fontstyles(24px, 1.17, null, null);
+  }
 }
 
 .mobmenu-footer__mail {
@@ -80,6 +105,25 @@
 
 .mobmenu-footer__list {
   display: flex;
+  @media screen and (max-width: 479px) {
+    flex-wrap: wrap;
+  }
+}
+
+.mobmenu-footer__item {
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 10px;
+  }
+
+  &:not(:first-child) {
+    padding-left: 10px;
+  }
+  @media screen and (max-width: 479px) {
+    &:first-child {
+      padding-left: 10px;
+    }
+  }
 }
 
 .mobmenu-footer__link {
