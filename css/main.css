@@ -335,10 +335,17 @@ h6 {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .policy-checkbox {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .policy-checkbox__frame {
@@ -506,7 +513,7 @@ h6 {
   border-bottom: 1px solid #ececec;
 }
 
-.container.container--flex {
+.container--flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -516,9 +523,9 @@ h6 {
 }
 
 @media screen and (max-width: 767px) {
-  .container.container--flex {
-    padding-top: 16px;
-    padding-bottom: 16px;
+  .container--flex {
+    padding-top: 10px;
+    padding-bottom: 10px;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1052,12 +1059,12 @@ h6 {
   }
 }
 
-.container.container--flex {
+.container--footer-flex {
   display: block;
 }
 
 @media screen and (min-width: 768px) {
-  .container.container--flex {
+  .container--footer-flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1067,8 +1074,8 @@ h6 {
   }
 }
 
-@media screen and (max-width: 1199px) {
-  .container.container--flex {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container--footer-flex {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
@@ -1123,7 +1130,7 @@ h6 {
   color: var(--main-text-color);
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .footer__box-social {
     margin-bottom: 60px;
   }

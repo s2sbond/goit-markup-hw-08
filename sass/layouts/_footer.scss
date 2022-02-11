@@ -1,5 +1,5 @@
 .footer {
-  max-width: 1600px;
+   max-width: 1600px;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bg-color);
@@ -8,15 +8,14 @@
   }
 }
 
-.container.container--flex {
+.container--footer-flex {
   display: block;
-
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: baseline;
   }
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-wrap: wrap;
     justify-content: space-around;
   }
@@ -60,7 +59,7 @@
 }
 
 .footer__box-social {
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 60px;
   }
   @media screen and (min-width: 1200px) {
