@@ -84,5 +84,6 @@
 }
 
 .project-list__text {
+  color: var(--main-text-color);
   @include fontstyles(16px, 1.87, 0.03em, null);
 }
