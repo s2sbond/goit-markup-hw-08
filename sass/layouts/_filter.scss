@@ -1,6 +1,5 @@
 .filter {
   display: flex;
-  margin-left: -8px;
 
   @media screen and (max-width: 767px) {
     flex-wrap: wrap;
@@ -20,7 +19,10 @@
 }
 
 .filter__item {
-  margin-left: 8px;
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
   @media screen and (max-width: 767px) {
     margin-top: 15px;
   }

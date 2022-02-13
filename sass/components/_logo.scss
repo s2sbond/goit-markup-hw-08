@@ -10,7 +10,10 @@
 }
 
 .logo__black {
-  color: #000000;
+  color: var(--title-color);
+  @media screen and (min-width: 1200px) {
+    color: #000000;
+  }
 }
 
 .logo__white {

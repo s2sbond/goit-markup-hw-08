@@ -1,5 +1,5 @@
 .footer {
-   max-width: 1600px;
+  max-width: 1600px;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--bg-color);
@@ -22,9 +22,6 @@
 }
 
 .footer__box-addr {
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 60px;
-  }
   @media screen and (min-width: 1200px) {
     flex-grow: 1;
     margin-right: 70px;
@@ -35,7 +32,7 @@
   margin-bottom: 20px;
 }
 
-.addr__item + .addr__item {
+.addr__item:not(:last-child) {
   margin-bottom: 8px;
   @media screen and (min-width: 1200px) {
     margin-bottom: 9px;
@@ -78,6 +75,9 @@
 .footer__box-form {
   @media screen and (max-width: 1199px) {
     text-align: center;
+  }
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
   }
 }
 
